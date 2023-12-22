@@ -42,10 +42,11 @@
                 li.remove();
                 let msg=document.getElementById("message");
                 msg.innerHTML="";
-                msg.innerHTML=`<b>${e.target.getAttribute('id').toUpperCase()} </b> image has been removed from list`;
+                msg.innerHTML=`<b style="color:red">${e.target.getAttribute('id').toUpperCase()} </b> image has been removed from list`;
             }
         })
 
+        
     </script>
 
 </body>
