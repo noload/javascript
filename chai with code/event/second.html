@@ -4,14 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        div{
+            position: relative;
+            margin: auto;
+            top: 50vh;
+            display:flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+            width: 200px;
+            height: 3\200px;
+            border: 1px solid black;
+          
+        }
+        
+    </style>
 </head>
 <body>
-    
-    <h1>Vaibhav Kamble</h1>
+    <div>
+    <h1 id="counter">1</h1>
     <button id="stop">Stop</button>
-
+    <button id="start">Start</button>
+</div>
     <script>
+        let  num=1;
+        let counter = document.getElementById('counter');
+        function startCount(){
+            counter.innerText=num
+            num++;
+        }
+        let intervalId;
+        function incrementNumber(){
+            intervalId = setInterval(startCount,1000);
+        }
+        
+        let start=document.getElementById('start');
+        
+        start.addEventListener('click',incrementNumber);
+        function stopIncrementing() {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
 
+        let stop = document.getElementById('stop');
+        stop.addEventListener('click',
+        stopIncrementing)
 
     </script>
 </body>
