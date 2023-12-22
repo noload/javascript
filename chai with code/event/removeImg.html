@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        li{
+            list-style: none;
+        }
+        ul{
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>All Images</h1>
+    
+    <ul id="images">
+        <li><img src="https://images.unsplash.com/photo-1694153309333-dc7576cf7fce?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDh8SnBnNktpZGwtSGt8fGVufDB8fHx8fA%3D%3D" id="cat" alt=""><h1>Cat</h1></li>
+        <li><img src="https://images.unsplash.com/photo-1668448388988-a901c54d954e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDR8SnBnNktpZGwtSGt8fGVufDB8fHx8fA%3D%3D" id="lion" alt=""><h1>Lion</h1></li>
+        <li><img src="https://images.unsplash.com/photo-1702657895789-48a1af2cde43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDd8SnBnNktpZGwtSGt8fGVufDB8fHx8fA%3D%3D" id="owl" alt=""><h1>Owl</h1></li>
+        <li><img src="https://images.unsplash.com/photo-1702700415763-3ad5a9bdde48?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI0fEpwZzZLaWRsLUhrfHxlbnwwfHx8fHw%3D" id="dog" alt=""><h1>Dog</h1></li>
+        <li><img src="https://images.unsplash.com/photo-1702157096814-1be7e18cd471?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDY3fEpwZzZLaWRsLUhrfHxlbnwwfHx8fHw%3D" id="eagle" alt=""><h1>Eagle</h1></li>
+    </ul>
+    <h3 id="message"></h3>
+    <script>
+
+        let ul = document.querySelector('#images');
+        ul.addEventListener('click',function(e){
+            // console.log(e.target.tagName === 'IMG');
+            if (e.target.tagName === 'IMG') {
+                let li = e.target.parentNode
+                li.remove();
+                let msg=document.getElementById("message");
+                msg.innerHTML="";
+                msg.innerHTML=`<b>${e.target.getAttribute('id').toUpperCase()} </b> image has been removed from list`;
+            }
+        })
+
+    </script>
+
+</body>
+</html>
