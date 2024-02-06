@@ -40,7 +40,7 @@ console.log("0xf" - 1);
  */
 console.log("0xz" - 1);
 /**
- * "0xz" this is an invalid hexa decimal number 
+ * "0xz" this is an invalid hexa decimal number
  * ToNumber("0xz") -- NaN
  * so (NaN - 1) -- >NaN
  */
