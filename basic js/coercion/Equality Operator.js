@@ -25,3 +25,16 @@
 console.log(null === null); //true
 
 console.log(undefined === undefined); // true
+
+console.log(NaN === 20); // false
+
+console.log(33 === 33); //true
+
+console.log(33 === 30); //false
+
+console.log(0 === -0); //true
+
+console.log("vaibhav" === "vaibhav"); // true
+
+x={a:20}
+console.log(x === x);//true
