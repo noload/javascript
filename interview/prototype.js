@@ -41,18 +41,36 @@
  */
 
 //method 1
-var OriginalObj = {
-  name: "Original",
-  age: 30,
+// var OriginalObj = {
+//   name: "Original",
+//   age: 30,
+// };
+
+// var user1 = { ...OriginalObj };
+// console.log("user1", user1);
+
+// //method 2
+// var user2 = Object.assign({}, OriginalObj);
+// console.log("user2", user2);
+
+// //method 3
+// var user3 = JSON.parse(JSON.stringify(OriginalObj));
+// console.log("user3", user3);
+
+/**
+ * What is the purpose of the Object.freeze() method in JavaScript?
+ *
+ * ANS : freeze() method of object is used to make object immutable
+ */
+//example
+obj = {
+  name: "ram",
+  age: 23,
+  married: true,
 };
 
-var user1 = { ...OriginalObj };
-console.log("user1", user1);
-
-//method 2
-var user2 = Object.assign({}, OriginalObj);
-console.log("user2", user2);
-
-//method 3
-var user3 = JSON.parse(JSON.stringify(OriginalObj));
-console.log("user3", user3);
+obj.age = 50; //here we are able to change age off obj bez it is mutable
+console.log(obj);
+Object.freeze(obj);
+obj.age = 32; // here we are not able to change age value to 30 bez now object is immutable due tto that freez() method
+console.log(obj);
