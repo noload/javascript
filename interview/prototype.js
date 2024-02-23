@@ -63,14 +63,24 @@
  * ANS : freeze() method of object is used to make object immutable
  */
 //example
-obj = {
-  name: "ram",
-  age: 23,
-  married: true,
-};
+// obj = {
+//   name: "ram",
+//   age: 23,
+//   married: true,
+// };
 
-obj.age = 50; //here we are able to change age off obj bez it is mutable
-console.log(obj);
-Object.freeze(obj);
-obj.age = 32; // here we are not able to change age value to 30 bez now object is immutable due tto that freez() method
+// obj.age = 50; //here we are able to change age off obj bez it is mutable
+// console.log(obj);
+// Object.freeze(obj);
+// obj.age = 32; // here we are not able to change age value to 30 bez now object is immutable due tto that freez() method
+// console.log(obj);
+
+/**
+ * Object.seal() method stops to modify object structure
+ * example here you can modify value of keys which already present but we cannot add extra  key value
+ */
+let obj = {
+  name: "Vaibhav",
+  age: 26,
+};
 console.log(obj);
